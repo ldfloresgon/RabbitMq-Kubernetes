@@ -24,7 +24,9 @@ kubectl apply -f "https://github.com/rabbitmq/cluster-operator/releases/download
 ## Helm Chart 
 
 ```
+kubectl create namespace rabbitmq
+
 helm repo add bitnami https://charts.bitnami.com/bitnami
 
-helm install rabbitMQ-release bitnami/rabbitmq-cluster-operator
+helm install --namespace rabbitmq rabbitmq-release bitnami/rabbitmq-cluster-operator
 ```
